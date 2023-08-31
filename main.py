@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 async def read_root():
-    # Get Git Commit
+    # Get Git Commit ok
     git_commit = subprocess.check_output(["git", "rev-parse", "HEAD"]).decode().strip()
 
     # Get Git Tag

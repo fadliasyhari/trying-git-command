@@ -7,13 +7,10 @@ RUN apt-get update && apt-get install -y git
 WORKDIR /app
 
 # Copy the requirements file into the container
-COPY requirements.txt .
+COPY . .
 
 # Install the required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the main.py file into the container
-COPY main.py .
 
 # Expose the port that the FastAPI app will run on
 EXPOSE 8000
